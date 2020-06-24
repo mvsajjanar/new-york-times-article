@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 50px 0;
+}
+
+#wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+}
+
+#nav-main svg {
+    height: 26px;
+    width: 195px;
+}
+
+#nav-main span {
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: bolder;
+}
+
+#nav-main {
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto auto 1fr auto auto;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+#nav-main button {
+    border: 1px solid black;
+    text-transform: uppercase;
+    border-radius: 2px;
+    padding: 6px;
+    background-color: rgb(86, 123, 149);
+    color: white;
+    font-weight: bold;
+}
+
+#nav-main > *:hover {
+    cursor: pointer;
+}
+
+h1 {
+    width: 500px;
+    justify-self: center;
+    font-weight: 100;
+    font-family: 'Fugaz One';
+}
+
+figure[id="cosmo"] {
+    justify-self: center;
+    width: 945px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+
+figure img {
+    width: 100%;
+}
+
+#content {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+}
+
+#content > p,figure,#video,#comments {
+    width: 560px;
+}
+
+#author {
+    font-weight: bolder;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#date-share {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    align-content: center;
+}
+
+#date-share #date {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#date-share #share *{
+    padding: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#date-share #share *:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    font-family: GFS Didot;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#inflation {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#inflation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    align-items: baseline;
+}
+
+#inflation-grid img {
+    width: 100%;
+}
+
+#inflation-grid p {
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#inflation-grid strong {
+    color: rgb(0, 0, 0);
+}
+
+#inflation-grid:after {
+    display: block;
+    margin: 20px 0;
+    width: 70px;
+    height: 1px;
+    content: '';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#inflation-caption {
+    font-size: small;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#content figure {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+
+#content-caption {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+}
+
+#content-caption a{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#comments {
+    display: flex;
+    justify-content: space-between;
+}
+
+#comments button {
+    border: 1px solid black;
+    text-transform: uppercase;
+    border-radius: 2px;
+    padding: 8px 80px;
+    background-color: rgb(86, 123, 149);
+    color: white;
+    font-weight: bold;
+}
+
+#comments span *{
+    padding: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#comments span *:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#others {
+    justify-self: center;
+    display: grid;
+    gap: 20px;
+    width: 90%;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        "more links"
+        "editor links";
+}
+
+#astronomy {
+    grid-area: more;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 10px;
+    
+}
+
+#popular {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+}
+
+#editor-pick {
+    grid-area: editor;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+#astronomy > p, #editor-pick > p {
+    grid-column: 1/-1;
+}
+
+#astronomy, #popular, #editor-pick {
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#astronomy div p, #editor-pick div p {
+    margin: 5px 0;
+}
+
+#others figure {
+    width: 200px;
+    margin: 0;
+}
+
+#others figure img {
+    width: 100%;
+}
+
+#others figcaption,#others span {
+    text-align: end;
+    right: 0;
+    font-size: x-small;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#others span {
+    font-size: small;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#popular a {
+    font-family: GFS Didot;
+    text-decoration: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: large;
+    font-weight: 500;
+}
+
+#popular a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#footer-head svg {
+    height: 26px;
+    width: 195px;
+}
+
+footer {
+    width: 90%;
+    justify-self: center;
+    padding-top: 10px;
+    border-top: 4px double rgba(0, 0, 0, 0.1);
+}
+
+#footer-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-head a {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#other-sections {
+    font-family: GFS Didot;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#other-sections ul {
+    list-style: none;
+    padding: 0;
+}
+
+#other-sections ul li{
+    padding: 5px 0;
+}
+
+#other-sections a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#other-sections a:hover {
+    text-decoration: underline;
+}
+
+.oth-sec p {
+    font-weight: 600;
+}
+
+#subscribe1 i {
+    display: inline-block;
+    margin-right: 5px;
+    height: 15px;
+    width: 15px;
+}
+
+#other-sections div:last-child {
+    padding-left: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#subscribe2 {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#foot-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#foot-nav a{
+    text-decoration: none;
+    margin: 0 3px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#foot-nav a:hover {
+    text-decoration: underline;
+}
+
+#pop-up {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+#pop-up:hover {
+    cursor: pointer;
+}
+
+#pop-up p:last-child {
+    justify-self: right;
+    position: absolute;
+    right: 0;
+    padding-right: 70px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#pop-up span {
+    display: inline-block;
+    padding-left: 30px;
+    font-size: 16px;
+}
